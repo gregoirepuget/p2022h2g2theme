@@ -1,0 +1,11 @@
+/*
+Theme Name: Thème des H2G2
+Author: Grégoire Puget
+Author URI: http://monsiteweb.com
+Description: Mon premier thème WordPress !
+*/
+
+h1{
+  text-transform:uppercase;
+  color:#FF9900;
+}
