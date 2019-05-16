@@ -9,9 +9,25 @@
             the_post();
     ?>
             <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-            <?php the_post_thumbnail('single_thumbnail'); ?>
+            <?php
+            if(is_front_page())
+            {
+              the_post_thumbnail('blog_thumbnail');
+            }
+            else {
+              the_post_thumbnail('single_thumbnail');
+            }
+            ?>  ?>
             <h2>Posté le <?php the_time('F jS, Y') ?></h2>
-            <p><?php the_content(); ?></p>
+            <p><?php
+            if(is_front_page())
+            {
+              the_excerpt();
+            }
+            else {
+              the_content();
+            }
+            ?></p>
     <?php
     }
     }
